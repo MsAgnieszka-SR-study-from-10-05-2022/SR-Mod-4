@@ -15,9 +15,23 @@ const RestaurantBillHeader = styled.h3`
 
 const RestaurantBillContent = styled.form`
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     margin: 25px;
+    min-height: 130px;
+`;
+
+const RestaurantBillInput = styled.input`
+    text-align: center;
+    max-width: 130px;
+    min-height: 35px;
+`;
+
+const RestaurantBillSelect = styled.select`
+    text-align: center;
+    max-width: 130px;
+    min-height: 35px;
 `;
 
 const ButtonWrapper = styled.button`
@@ -31,8 +45,9 @@ const ResultOfTheBill = styled.p`
     background-color: #1d2536;
 `;
 
-function RestaurantBill() {
-    const [vat] = useState(8);
+// Komponent funkcyjny
+
+function RestaurantBill({ vat }) {
     const [inputPriceValue, setInputPriceValue] = useState('');
     const [tipValue, setSelectTipValue] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
@@ -66,14 +81,14 @@ function RestaurantBill() {
             <RestaurantBillWrapper>
                 <RestaurantBillHeader>Task 1 - Przeliczanie rachunku w restauracji</RestaurantBillHeader>
                 <RestaurantBillContent>
-                    <input type='number' onChange={handleInputPriceValue} placeholder={'Podaj kwotę netto'}></input>
-                    <select onChange={handleSelectValue}>
+                    <RestaurantBillInput type='number' onChange={handleInputPriceValue} placeholder={'Podaj kwotę netto'}></RestaurantBillInput>
+                    <RestaurantBillSelect onChange={handleSelectValue}>
                         <option value="none" selected disabled >Napiwek</option>
                         <option value="0.05">5%</option>
                         <option value="0.10">10%</option>
                         <option value="0.15">15%</option>
                         <option value="0.20">20%</option>
-                    </select>
+                    </RestaurantBillSelect>
                     <ButtonWrapper type='button' onClick={handleCalculateResult}>Przelicz💲</ButtonWrapper>
                 </RestaurantBillContent>
                 <ResultOfTheBill>
