@@ -4,7 +4,8 @@ const colors = {
     mainDarkColor: '#13151a',
     wrapperBgColor: '#333b4b',
     borderColor: '#13151a',
-    errorColor: 'red'
+    errorColor: '#ea2525',
+    greenColor: '#15e615'
 };
 
 export default colors;
