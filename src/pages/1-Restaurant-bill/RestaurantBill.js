@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+
+import Button from 'components/Button';
+
 import styled from 'styled-components';
 import colors from 'components/helpers/colors';
 import 'App.scss';
@@ -60,16 +63,17 @@ function RestaurantBill({ vat, buttonTitle }) {
                     placeholder={'Podaj kwotę netto'}>
                     </input>
                     <select
-                    className='form__select-tip'
-                    onChange={handleSelectValue}>
-                        <option value="0" selected disabled >Napiwek</option>
-                        <option value="0.05">5%</option>
-                        <option value="0.10">10%</option>
-                        <option value="0.15">15%</option>
-                        <option value="0.20">20%</option>
+                        className='form__select-tip'
+                        defaultValue="0"
+                        onChange={handleSelectValue}>
+                            <option value="0" disabled >Napiwek</option>
+                            <option value="0.05">5%</option>
+                            <option value="0.10">10%</option>
+                            <option value="0.15">15%</option>
+                            <option value="0.20">20%</option>
                     </select>
                     <span style={{marginTop: '10px'}}>⬇️</span>
-                    <button className='form__button' type='button' onClick={handleCalculateResult}>{buttonTitle}</button>
+                    <Button className='form__button' type='button' onClick={handleCalculateResult} buttonTitle='przelicz'></Button>
                 </RestaurantBillContent>
                 <ResultOfTheBill>
                     Twój rachunek wraz z {vat}% VAT'em oraz napiwkiem wynosi <b>{totalPrice} zł</b>.
@@ -87,7 +91,6 @@ function RestaurantBill({ vat, buttonTitle }) {
 //         super(props);
 //         this.state = {
 //             vat: props.vat,
-//             buttonTitle: props.buttonTitle,
 //             inputPriceValue: 0,
 //             tipValue: 0,
 //             totalPrice: 0,
@@ -126,15 +129,18 @@ function RestaurantBill({ vat, buttonTitle }) {
 //                 <h3 className='form__main-title'>Task 1 - Przeliczanie rachunku w restauracji - komponent klasowy</h3>
 //                 <RestaurantBillContent>
 //                     <input className='form__input-price' type='number' onChange={(event) => this.handleInputPriceValue(event)} placeholder={'Podaj kwotę netto'}></input>
-//                     <select className='form__select-tip' onChange={(event) => this.handleSelectValue(event)}>
-//                         <option defaultValue="0" selected disabled >Napiwek</option>
-//                         <option value="0.05">5%</option>
-//                         <option value="0.10">10%</option>
-//                         <option value="0.15">15%</option>
-//                         <option value="0.20">20%</option>
+//                     <select
+//                         className='form__select-tip'
+//                         defaultValue="0"
+//                         onChange={(event) => this.handleSelectValue(event)}>
+//                             <option value="0" disabled >Napiwek</option>
+//                             <option value="0.05">5%</option>
+//                             <option value="0.10">10%</option>
+//                             <option value="0.15">15%</option>
+//                             <option value="0.20">20%</option>
 //                     </select>
 //                     <span style={{marginTop: '10px'}}>⬇️</span>
-//                     <button className='form__button' type='button' onClick={(event) => this.handleCalculateResult(event)}>{this.state.buttonTitle}</button>
+//                     <Button className='form__button' type='button' onClick={(event) => this.handleCalculateResult(event)} buttonTitle='przelicz'></Button>
 //                 </RestaurantBillContent>
 //                 <ResultOfTheBill>
 //                     Twój rachunek wraz z {this.state.vat}% VAT'em oraz napiwkiem wynosi <b>{this.state.totalPrice} zł</b>.

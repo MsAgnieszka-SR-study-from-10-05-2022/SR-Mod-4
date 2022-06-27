@@ -50,20 +50,21 @@
             border-radius: 5px;
         }
     }
-    &__input-name--error,
-    &__input-email--error,
-    &__textarea--error,
-    &__gender--error,
-    &__checkbox--error {
-        input,
-        textarea,
-        .form__gender-item,
-        .form__checkbox-item {
-            border: 2px solid $errorColor;
-        }
+    // &__input-name--error,
+    // &__input-email--error,
+    // &__textarea--error,
+    // &__gender--error,
+    // &__checkbox--error {
+    //     input,
+    //     textarea,
+    //     .form__gender-item,
+    //     .form__checkbox-item {
+    //         border: 2px solid $errorColor;
+    //     }
 
-        p {
-            color: $errorColor;
-        }
-    }
+        // p {
+        //     visibility: hidden;
+        //     color: $errorColor;
+        // }
+    // }
 }
