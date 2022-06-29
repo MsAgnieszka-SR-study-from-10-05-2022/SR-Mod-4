@@ -1,0 +1,96 @@
+@import 'universal-styles/colors.scss';
+
+.form {
+    &__input-operation-name,
+    &__input-value {
+        input {
+            text-align: center;
+            margin: 10px 0 0 15px;
+            padding: 8px;
+            height: 35px;
+            width: 50%;
+            background-color: $mainBrightColor;
+            border: 2px solid $borderColor;
+            border-radius: 5px;
+        }
+    }
+
+    &__select-category {
+        text-align: center;
+            margin: 10px 0 0 15px;
+            padding: 8px;
+            height: 35px;
+            width: 50%;
+            background-color: $mainBrightColor;
+            border: 2px solid $borderColor;
+            border-radius: 5px;
+    }
+
+    &__array-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        &-income,
+        &-expense {
+            display: flex;
+            flex-direction: column;
+            justify-content:start;
+            width: 320px;
+            border: 1px solid $mainBrightColor;
+            border-radius: 5px;
+
+            &-title {
+                margin: 10px 0 5px;
+                text-decoration: underline;
+            }
+
+            tr {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 5px;
+                border-bottom: 1px solid $mainBrightColor;
+            }
+
+            th, td {
+                width: 130px;
+                margin-bottom: 5px;
+            }
+
+            .delete-btn,
+            .empty-place {
+                width: 20px;
+
+                button {
+                background: none;
+                cursor: pointer;
+                border: none;
+                }
+            }
+
+        }
+
+        &-income-title {
+            color: $greenColor;
+        }
+
+        &-expense-title {
+            color: $errorColor;
+        }
+
+        &-summary {
+            &-title {
+                margin: 15px 0 5px;
+            }
+
+            &-result {
+                font-weight: bold;
+
+                span {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
