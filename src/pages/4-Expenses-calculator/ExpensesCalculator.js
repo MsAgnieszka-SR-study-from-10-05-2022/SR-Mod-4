@@ -29,8 +29,32 @@ function ExpensesCalculator({ titleOfForm }) {
             }
         });
 
-    const incomesDataArray = [];
-    const expensesDataArray = [];
+    const incomesDataArray = [
+        {
+            nameOfOperation: 'wyplata',
+            valueOfOperation: '5432.10',
+            positionType: 'income',
+            selectCategory: 'private',
+            id: 'wyplata-0'
+        }
+    ];
+
+    const expensesDataArray = [
+        {
+            nameOfOperation: 'zakupy biuro',
+			valueOfOperation: '274.65',
+			positionType: 'expense',
+			selectCategory: 'business',
+			id: 'zakupy-0'
+        },
+        {
+            nameOfOperation: 'obiad',
+			valueOfOperation: '32.50',
+			positionType: 'expense',
+			selectCategory: 'private',
+			id: 'zakupy-1'
+        }
+    ];
 
     const [incomesData, setIncomesData] = useState(incomesDataArray);
     const [expensesData, setExpensesData] = useState(expensesDataArray);
