@@ -4,6 +4,7 @@ import React from 'react';
 // import FormsValidation from 'pages/2-Forms-validation';
 // import FormWithUseForm from 'pages/3-Form-using-hook-useForm';
 import ExpensesCalculator from 'pages/4-Expenses-calculator';
+import ColorChangingButton from 'pages/5-ColorChangingButton';
 
 import './App.scss';
 import 'pages/3-Form-using-hook-useForm/style.scss';
@@ -24,8 +25,8 @@ function App() {
         emailPlaceholder='Podaj swój adres e-mail'
         shortBio='Wpisz treść wiadomości...'
       /> */}
-      <ExpensesCalculator
-        titleOfForm='Kalkulator wydatków' />
+      {/* <ExpensesCalculator titleOfForm='Kalkulator wydatków' /> */}
+        <ColorChangingButton />
     </div>
   );
 }
