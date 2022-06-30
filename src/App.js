@@ -7,7 +7,6 @@ import ExpensesCalculator from 'pages/4-Expenses-calculator';
 import AppRefColorChangingButton from 'pages/5-ColorChangingButton';
 
 import './App.scss';
-// import 'pages/3-Form-using-hook-useForm/style.scss';
 
 function App() {
   return (
@@ -26,7 +25,7 @@ function App() {
         shortBio='Wpisz treść wiadomości...'
       />
       <ExpensesCalculator titleOfForm='Kalkulator wydatków' />
-        <AppRefColorChangingButton />
+      <AppRefColorChangingButton />
     </div>
   );
 }
