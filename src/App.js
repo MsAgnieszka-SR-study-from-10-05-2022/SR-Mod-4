@@ -3,8 +3,8 @@ import React from 'react';
 // import RestaurantBill from 'pages/1-Restaurant-bill';
 // import FormsValidation from 'pages/2-Forms-validation';
 // import FormWithUseForm from 'pages/3-Form-using-hook-useForm';
-import ExpensesCalculator from 'pages/4-Expenses-calculator';
-import ColorChangingButton from 'pages/5-ColorChangingButton';
+// import ExpensesCalculator from 'pages/4-Expenses-calculator';
+import AppRefColorChangingButton from 'pages/5-ColorChangingButton';
 
 import './App.scss';
 import 'pages/3-Form-using-hook-useForm/style.scss';
@@ -26,7 +26,7 @@ function App() {
         shortBio='Wpisz treść wiadomości...'
       /> */}
       {/* <ExpensesCalculator titleOfForm='Kalkulator wydatków' /> */}
-        <ColorChangingButton />
+        <AppRefColorChangingButton />
     </div>
   );
 }
