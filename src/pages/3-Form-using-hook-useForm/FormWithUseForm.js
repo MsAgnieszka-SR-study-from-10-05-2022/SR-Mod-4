@@ -13,7 +13,6 @@ import Button from 'components/Button';
 import colors from 'components/helpers/colors';
 
 import 'App.scss';
-import 'pages/3-Form-using-hook-useForm/style.scss';
 
 function FormWithUseForm(props) {
     const {

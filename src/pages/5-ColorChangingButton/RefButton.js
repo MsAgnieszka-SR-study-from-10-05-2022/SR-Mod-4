@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import colors from 'components/helpers/colors';
-import './style.scss';
 
 const Button = styled.button`
+    margin: 10px 0;
     padding: 10px 20px;
     font-size: 18px;
     color: ${colors.mainDarkColor};
