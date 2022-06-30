@@ -22,13 +22,24 @@ function ColorChangingButton() {
 
     const buttonRef = useRef();
 
-    useEffect(() => {
+    const mouseOnButton = () => {
         buttonRef.current.style.background = `${colors.mainDarkColor}`;
         buttonRef.current.style.color = `${colors.mainBrightColor}`;
-    });
+    };
+
+    const mouseOutOfButton = () => {
+        buttonRef.current.style.background = ``;
+        buttonRef.current.style.color = ``;
+    };
 
     return (
-        <Button ref={buttonRef}>Jestem <span>zmieniającym kolor</span> przyciskiem 😅</Button>
+        <Button
+            ref={buttonRef}
+            onMouseEnter={mouseOnButton}
+            onMouseLeave={mouseOutOfButton}
+        >
+            Jestem <span>zmieniającym kolor</span> przyciskiem 😅
+        </Button>
     );
 }
 
